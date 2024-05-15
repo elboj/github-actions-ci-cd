@@ -11,7 +11,6 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
@@ -24,3 +23,9 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+  
+  deploy:
+    runs-on: windows-latest
+    steps:
+      - name: Print Statement
+        run: Write-Output "This is a deploy job meant to run a file from the build job"
